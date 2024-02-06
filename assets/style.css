@@ -1,0 +1,63 @@
+h2 {
+    border: 2px dashed rgb(175, 169, 175);
+    width: 50%;
+    font-size: 20px;
+}
+
+header {
+    border: 1px;
+    color: white;
+    background: linear-gradient(45deg, rgb(101, 102, 195), rgb(71, 31, 120));
+    text-align: center;    
+}
+
+#citydisplay {
+border: 2px solid;
+width: 67%;
+position: relative;
+top: 10px;
+left: 300px;
+}
+
+#container1 {
+border: 1px solid;
+width: 200px;
+height: 250px;
+display: inline-block;
+}
+
+#container2 {
+border: 1px solid;
+width: 200px;
+height: 250px;
+display: inline-block;
+}
+
+#container3 {
+border: 1px solid;
+width: 200px;
+height: 250px;
+display: inline-block;
+}
+    
+#container4 {
+border: 1px solid;
+width: 200px;
+height: 250px;
+display: inline-block;
+}
+
+#container5 {
+border: 1px solid;
+width: 200px;
+height: 250px;
+display: inline-block;
+}
+
+#Weekforecast { 
+width: 80%;
+background-color: white;
+position: relative;
+top: 50px;
+left: 300px;
+} 

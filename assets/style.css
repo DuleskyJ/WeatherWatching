@@ -1,14 +1,11 @@
 h2 {
     font-size: 20px;
-
 }
 
 #chungus {
     display: flex;
     flex-direction: row;
 }
-
-
 
 #cityHistory {
     display: flex;

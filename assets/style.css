@@ -19,11 +19,12 @@ font-size: 25px;
     justify-content: center;
 }
 
-#userInput {
+#citySearch  {
     display: flex;
     justify-content: center;
     flex-direction: column;
 }
+
 
 header {
     border: 1px;
@@ -41,7 +42,7 @@ top: 10px;
 #forecastCards {
 border: 1px solid;
 width: 130px;
-height: 180px;
+height: 260px;
 display: inline-block;
 background-color: slategrey;
 }

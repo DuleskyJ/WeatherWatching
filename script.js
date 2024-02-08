@@ -1,5 +1,6 @@
 // MY API KEY that pulls from OpenWeather API: d92491cc84a33db5f345f1a39677bb71
 
+// global variables I'll be using for my functions 
 var userInput = document.querySelector("#userInput");
 var currentWeather = $("#currentWeather");
 var cityList = {};
@@ -9,11 +10,14 @@ citySubmit.addEventListener("click", function() {
     geoCode(userInput.value);
 })
 
+// Clearing previous city's weather when searching
 $('#generatedCities').click(function(){
     event.preventDefault();
     var city = event.target.textContent;
-    geoCode(city); })
+    geoCode(city);
+ })
 
+// fetching API geocode to gather coordinates of a city given then creating variables with the data so all site information updates properly
 function geoCode(city) {
     var requestURL = "https://api.openweathermap.org/geo/1.0/direct?q="+ city +"&appid=d92491cc84a33db5f345f1a39677bb71"
     fetch(requestURL)
@@ -28,9 +32,11 @@ function geoCode(city) {
         FiveDayForecast(lat, lon);
         cityList[data[0].name]=data[0].name;
         localStorage.setItem('searchHistory', JSON.stringify(cityList));
+        console.log(cityList)
     })
 }
 
+// fetching API to gather a city's weather information and converting what's gathered into readable HTML
 function mainWeather(lat, lon) {
     var requestURL = "https://api.openweathermap.org/data/2.5/weather?lat="+ lat +'&lon='+ lon +'&appid=d92491cc84a33db5f345f1a39677bb71&units=imperial'
     fetch(requestURL)
@@ -47,6 +53,7 @@ function mainWeather(lat, lon) {
     })
 }
 
+// fetching the forecast API so I can use it to gather and pair information to fill my 5 day forecast cards with data
 function FiveDayForecast (lat, lon) {
     var requestURL= "https://api.openweathermap.org/data/2.5/forecast?lat="+ lat +'&lon='+ lon +'&appid=d92491cc84a33db5f345f1a39677bb71&units=imperial'
     fetch(requestURL)
@@ -72,16 +79,19 @@ function FiveDayForecast (lat, lon) {
     })
 }
    
-function makeButtons(){
-    var searchHistory = $('#generatedCities');
-    cityList= JSON.parse(localStorage.getItem('searchHistory'));
-    searchHistory.html('');
-    for (var key in cityList){
-        var button = document.createElement('button');
-        searchHistory.append(button);
-        button.textContent = cityList(key);
-    }
-}
+// Function in progress... Trying to create and save buttons after searching for cities
+// Working on it with group & instructors 
 
-makeButtons();
+ // function makeButtons(){
+ //  var searchHistory = $('#generatedCities');
+ //  cityList= JSON.parse(localStorage.getItem('searchHistory'));
+ //   searchHistory.html('');
+ //   for (var key in cityList){
+ //       var button = document.createElement('button');
+ //       searchHistory.append(button);
+ //       button.textContent = cityList(key);
+ //    }
+ // }
+
+ // makeButtons();
 

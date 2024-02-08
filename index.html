@@ -11,28 +11,30 @@
         <header> 
             <h1>Weather Watch</h1>
         </header>
-        
-        <div id="chungus">   <!--Creating "Wrapper" for styling-->   
-            <nav>   
-                <section id="citySearch"> 
-                    <h2> Find a City:</h2>
-                    <!--Search Bar-->
-                    <input type="text" id="userInput" placeholder="Type your city here!"> 
-                    <input type="button" value="submit" id="citySubmit"> 
-                </section> 
-                <!--Creating buttons for each city-->
-                <section id="generatedCities">
-                </section>
-            </nav>
+                <!--Creating "Wrapper" for styling--> 
+        <div id="chungus">     
+                    <nav>   
+                        <section id="citySearch"> 
+                            <h2> Find a City:</h2>
+                            <!--Search Bar-->
+                            <input type="text" id="userInput" placeholder="Type your city here!"> 
+                            <input type="button" value="submit" id="citySubmit"> 
+                        </section> 
+                        <!--Creating buttons for each city-->
+                        <section id="generatedCities">
+
+                        </section>
+                    </nav>
+                    <!--The main display for the current weather and date-->
             <section id="Weather">
-                <section id="cityDisplay"> 
-                    <h1></h1>
-                    <img alt="Weather Status Icon" id="weatherIcon">
-                    <p id="mainTemp"></p>
-                    <p id="mainWind"></p>
-                    <p id="mainHumidity"></p>
-                </section>
-                
+                    <section id="cityDisplay"> 
+                        <h3 id="demo"><script>document.getElementById("demo").innerHTML = Date();</script></h3>
+                        <img alt="Weather Status Icon" id="weatherIcon">
+                        <p id="mainTemp"></p>
+                        <p id="mainWind"></p>
+                        <p id="mainHumidity"></p>
+                    </section>
+                <!-- Creating the 5 day forecast with 5 individual divs containing correct weather information-->
                 <section id="weekForecast">
                     <div id="forecastCards">
                         <h4></h4>
@@ -72,10 +74,12 @@
                 </section>
             </section>
         </div>
+        <!--Scripts used-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="./script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/dayjs@1.11.3/dayjs.min.js"
     integrity="sha256-iu/zLUB+QgISXBLCW/mcDi/rnf4m4uEDO0wauy76x7U="
     crossorigin="anonymous"></script> 
+    
 </body>
 </html>
